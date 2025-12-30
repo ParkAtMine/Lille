@@ -4,117 +4,219 @@
     <meta charset="UTF-8">
     <title>Park At Mine Lille</title>
     <style>
+        /* BODY + FOND */
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+
+            /* IMAGE DE FOND PRINCIPALE */
+            background-image: url('images/imagebackground.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
             margin: auto;
             padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
         }
+
         h1, h2 {
             color: #0077cc;
         }
-        section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+
+        /* HEADER LOGO */
+        .header {
+            width: 100%;
+            text-align: center;
+            margin: 30px 0;
         }
+
+        .header img {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            background-image: url('images/photo2.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            color: #000;
+        }
+
+        .hero-overlay {
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        /* SECTIONS */
+        section {
+            margin: 40px 0;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
+        }
+
+        /* BOUTONS */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
         a.button {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px 0 0;
+            padding: 12px 22px;
+            margin: 0 10px 10px 0;
             background-color: #0077cc;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-weight: bold;
         }
+
+        a.button:hover {
+            background-color: #005fa3;
+        }
+
+        /* FORMULAIRES */
         form input, form textarea {
             display: block;
             width: 100%;
             margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 5px;
+            padding: 10px;
+            border-radius: 6px;
             border: 1px solid #ccc;
         }
+
         form input[type="submit"] {
             background-color: #0077cc;
             color: #fff;
             border: none;
             cursor: pointer;
+            font-weight: bold;
         }
+
+        .small-text {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        /* ICÔNES POUR LES ÉTAPES */
+        .step-icon {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 600px) {
+            .button-container a.button {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
     </style>
 </head>
 <body>
-<!-- HEADER IMAGE -->
-<img src="images/photo1.jpg" alt="Photo header" style="width:100%; height:auto;">
 
-<section style="background-image: url('images/photo2.jpg'); background-size: cover; background-position: center; padding: 40px; color: white; border-radius: 10px;">
-    <h1>Parking étudiant lillois simplifié !</h1>
-    <p>Trouvez des places de parking près de votre campus/logement sans forcer. Park At Mine Lille met en relation des étudiants lillois et des détenteurs de places de parking disponibles.</p>
-    <p>En cliquant sur un des boutons ci-dessous vous allez être redirigé vers un formulaire sécurisé Google Forms. Celui-ci nous permettra de comprendre vos besoins et de vous proposer un service personnalisé !</p>
-    <a class="button" href="#">Je veux trouver une place !</a>
-    <a class="button" href="#">Je veux proposer ma place !</a>
-</section>
+<div class="container">
 
+    <!-- HEADER LOGO -->
+    <div class="header">
+        <img src="images/logo.png" alt="Logo Park At Mine Lille">
+    </div>
 
-<section>
-    <h2>Comment ça marche ?</h2>
-    <ol>
-        <li>Tu remplis le formulaire qui t'es destiné (en recherche d'une place ou en possession d'une place).</li>
-        <li>On te met en relation avec une personne qui répond à ton besoin.</li>
-        <li>Vous gérez directement entre vous ce qui concerne les modalités de la location.</li>
-    </ol>
-</section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Parking étudiant lillois simplifié !</h1>
+            <p>
+                Trouvez des places de parking près de votre campus ou logement sans forcer. 
+                Park At Mine Lille met en relation des étudiants lillois et des détenteurs de places disponibles.
+            </p>
 
-<section>
-    <h2>Contactez-nous</h2>
-    <form>
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email">
-        <textarea name="message" placeholder="Message"></textarea>
-        <input type="submit" value="Submit">
-    </form>
-</section>
+            <div class="button-container">
+<a class="button" href="https://forms.gle/4NYzdtsUFYJmKtXo7" target="_blank" rel="noopener">
+    Je veux trouver une place
+</a>
 
-<section>
-    <h2>Mentions légales et responsabilité</h2>
-    <p>Nous agissons uniquement en tant qu’intermédiaire de mise en relation entre propriétaires et locataires.</p>
-    <p>Nous ne vérifions pas :</p>
-    <ul>
-        <li>L’autorisation de sous-location,</li>
-        <li>Les contrats entre les parties,</li>
-        <li>Les paiements effectués entre les utilisateurs.</li>
-    </ul>
-    <p>Nous ne pouvons pas être tenus responsables des litiges, retards ou problèmes liés aux locations, ni des pertes financières éventuelles.</p>
-    <p>Toutes les informations présentes sur ce site sont fournies à titre informatif. L’utilisation de notre service implique l’acceptation de ces conditions.</p>
-</section>
+<a class="button" href="https://forms.gle/B8b9kRYXEc8VUprv7" target="_blank" rel="noopener">
+    Je veux proposer ma place
+</a>
 
-<section>
-    <h2>Protection de vos données personnelles</h2>
-    <p>Nous collectons certaines informations pour vous mettre en relation :</p>
-    <ul>
-        <li>Nom et prénom</li>
-        <li>Adresse e-mail</li>
-        <li>Localisation</li>
-    </ul>
-    <p>Ces informations sont strictement utilisées pour faciliter la mise en relation et ne sont jamais revendues à des tiers.</p>
-    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
-    <ul>
-        <li>Accès, rectification et suppression de vos données,</li>
-        <li>Opposition à leur traitement à tout moment,</li>
-        <li>Pour exercer ces droits, vous pouvez nous contacter à <a href="mailto:contact@tonprojet.com">contact@tonprojet.com</a>.</li>
-    </ul>
-    <p>Nous prenons toutes les mesures pour assurer la sécurité et la confidentialité de vos données.</p>
-</section>
+            </div>
 
-<section>
-    <h2>Park At Mine Lille</h2>
-    <p>Park At Mine Lille est un service de mise en relation. Les modalités de location sont gérées directement entre les utilisateurs.</p>
-</section>
+            <p class="small-text">
+                *En cliquant sur un des boutons ci-dessus, vous serez redirigé vers un formulaire sécurisé.
+            </p>
+        </div>
+    </section>
 
+    <!-- COMMENT CA MARCHE -->
+    <section>
+        <h2>Comment ça marche ?</h2>
+        <ol>
+            <li><span class="step-icon">📄</span>Tu remplis le formulaire qui te correspond (en cliquant sur un des boutons au dessus)</li>
+            <li><span class="step-icon">📲</span>On te met en relation avec la bonne personne</li>
+            <li><span class="step-icon">🔑</span>Vous gérez la location directement entre vous</li>
+        </ol>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2>Contactez-nous</h2>
+        <p>
+            Pour toute question relative à notre service, contactez-nous à l'adresse mail suivante :
+            <a href="mailto:parkatminelille@gmail.com">parkatminelille@gmail.com</a>
+        </p>
+    </section>
+
+    <!-- MENTIONS LEGALES -->
+    <section>
+        <h2>Mentions légales et responsabilité</h2>
+        <p>
+            Nous agissons uniquement en tant qu’intermédiaire de mise en relation entre
+            propriétaires et locataires.
+        </p>
+        <p>Nous ne vérifions pas :</p>
+        <ul>
+            <li>L’autorisation de sous-location</li>
+            <li>Les contrats entre les parties</li>
+            <li>Les paiements effectués entre les utilisateurs</li>
+        </ul>
+        <p>
+            Nous ne pouvons pas être tenus responsables des litiges, retards ou problèmes
+            liés aux locations, ni des pertes financières éventuelles.
+        </p>
+    </section>
+
+    <!-- PROTECTION DONNEES -->
+    <section>
+        <h2>Protection de vos données personnelles</h2>
+        <p>Nous collectons certaines informations pour vous mettre en relation :</p>
+        <ul>
+            <li>Nom et prénom</li>
+            <li>Adresse e-mail</li>
+            <li>Localisation</li>
+        </ul>
+        <p>
+            Ces informations sont strictement utilisées pour faciliter la mise en relation
+            et ne sont jamais revendues à des tiers.
+        </p>
+    </section>
+
+</div>
 </body>
 </html>
+
